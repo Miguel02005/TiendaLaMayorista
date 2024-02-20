@@ -79,19 +79,15 @@ public class Main {
 
                 System.out.println("Escribe el nombre del producto: ");
                 String busProducto = scanner.next(); 
-                boolean encontrado = false;
 
                 for (Importado importado : listaProductosIm) {
                     if (importado.getNombre().equals(busProducto)) {
                         System.out.println("Nombre: " + importado.getNombre() + ", Código: " + importado.getCodigo() + ", Registro DIAN: " + importado.licenciaImportacion);
-                        encontrado = true;
-                        break;  
-                    }
-                }
-            
-                if (!encontrado) {
+                        
+                    } else {
                     System.out.println("Ese producto no existe");
                 }
+            }
 
             } else if (opcion == 7) {
                 System.out.println("Saliendo del programa.");
