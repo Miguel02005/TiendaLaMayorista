@@ -61,18 +61,13 @@ public class Main {
 
                 System.out.println("Escribe el nombre del producto: ");
                 String busProducto = scanner.next(); 
-                boolean encontrado = false;
 
                 for (Nacional nacional : listaProductosNac) {
                     if (nacional.getNombre().equals(busProducto)) {
-                        System.out.println("Nombre: " + nacional.getNombre() + ", Código: " + nacional.getCodigo() + ", Registro DIAN: " + nacional.registroDian);
-                        encontrado = true;
-                        break;  
+                        System.out.println("Nombre: " + nacional.getNombre() + ", Código: " + nacional.getCodigo() + ", Registro DIAN: " + nacional.registroDian); 
+                    }else {
+                        System.out.println("Ese producto no existe");
                     }
-                }
-            
-                if (!encontrado) {
-                    System.out.println("Ese producto no existe");
                 }
 
             } else if (opcion == 6) {
